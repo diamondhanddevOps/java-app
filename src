@@ -1,0 +1,7 @@
+package com.example
+
+class MyClass {
+    def myMethod() {
+        echo 'Hello from MyClass!'
+    }
+}
