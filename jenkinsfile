@@ -1,0 +1,15 @@
+pipeline{
+
+    agent any
+
+    stages
+
+       stage('Git Checkout'){
+
+           steps{
+
+            script{
+                git branch: 'sketch', url: 'https://github.com/diamondhanddevOps/java-app.git'
+            }
+    }   }
+}
