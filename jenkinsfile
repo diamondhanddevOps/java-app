@@ -9,7 +9,9 @@ pipeline{
            steps{
 
             script{
-                git branch: 'sketch', url: 'https://github.com/diamondhanddevOps/java-app.git'
+                gitCheckout
+                 branch: 'sketch'
+                 url: 'https://github.com/diamondhanddevOps/java-app.git'
             }
     }   }
 }
