@@ -7,19 +7,18 @@ pipeline {
         stage('Git Checkout') {
             steps {
                 gitCheckout(
-                    branch:"sketch"
+                    branch: 'sketch',
                     url: 'https://github.com/diamondhanddevOps/java-app.git'
                 )
+            }
+        }
+
+        stage('Unit Test maven') {
+            steps {
+                script {
+                    mvnTest()
                 }
             }
-            stage('Unit Test maven'){
-          
-            steps{
-               script{
-                    
-                    mvnTest()
-            }   }    
-        
-        }       
-    }  
+        }
+    }
 }
